@@ -6,9 +6,10 @@ matrix:
 
 before_install:
   - brew install plenv
-  - brew install perl-build
+  - brew install perl-build --HEAD
   - eval "$(plenv init -)"
 
 script:
+  - perl-build --version
   - plenv install 5.28.0
   - plenv install --list
